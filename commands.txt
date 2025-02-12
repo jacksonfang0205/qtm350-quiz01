@@ -1,0 +1,32 @@
+git clone https://github.com/jacksonfang0205/qtm350-quiz01.git
+cd qtm350-quiz01
+touch commands.txt
+git branch feature-update
+git checkout feature-update
+mkdir reports
+cd reports
+touch summary.md
+"This document provides a summary of the project updates." >> summary.md
+git add .
+cd /Users/jackson/Documents/emory/emory2025Spring/QTM350/qtm350-quiz01
+git add reports/
+git commit -m "Add reports directory"
+cd reports
+touch file{1..3}.txt
+cd /Users/jackson/Documents/emory/emory2025Spring/QTM350/qtm350-quiz01
+mv ./data/raw-data.csv ./data/input-data.csv
+cd scripts
+mkdir backup
+cp *.py backup
+cd /Users/jackson/Documents/emory/emory2025Spring/QTM350/qtm350-quiz01
+rm docs/documentation.md
+git add .
+git commit -m "Update project files"
+touch .gitignore
+echo "temp/" >> .gitignore
+echo "dataset0?.csv" >> .gitignore
+cat .gitignore
+git add .gitignore && git commit -m "Add .gitignore file"
+git checkout main
+rm .DS_Store
+git merge feature-update
